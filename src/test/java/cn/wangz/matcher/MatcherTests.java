@@ -61,9 +61,9 @@ public class MatcherTests {
     @Test
     public void matchTest5() throws IOException {
         // test function
-        String matchDsl = "lower(name) = lower(\"wang\") and age > 20 and age < 30 and (interest = \"basketball\" or interest = \"football\") and desc =~ \"hello.*\"";
+        String matchDsl = "lower(name) = lower(\"WangZ\") and age > 20 and age < 30 and (interest = \"basketball\" or interest = \"football\") and desc =~ \"hello.*\"";
         Map<String, Object> variableMap = new HashMap<>();
-        variableMap.put("name", "WANG");
+        variableMap.put("name", "WANGZ");
         variableMap.put("age", 25);
         variableMap.put("interest", "basketball");
         variableMap.put("desc", "hello wangz");
