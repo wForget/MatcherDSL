@@ -23,6 +23,11 @@
     Assert.assertEquals(matcher.match(), true);
 ```
 
+## 说明
+
+1. 定义函数
+可在 cn.wangz.matcher.function.impl 包中实现新的函数，继承 IFunction 接口，并添加 @Function 注解并实现 execute 方法。
+
 ## 参考
 
 + [从0到1搭建技术中台之报警平台实践：匹配器演进](https://www.infoq.cn/article/HzCDvxc0dc5F5clozoeT)
