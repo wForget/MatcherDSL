@@ -58,6 +58,18 @@ public class MatcherTests {
         Assert.assertEquals(matcher.match(), true);
     }
 
+    @Test
+    public void matchTest5() throws IOException {
+        // test function
+        String matchDsl = "lower(name) = lower(\"wang\") and age > 20 and age < 30 and (interest = \"basketball\" or interest = \"football\") and desc =~ \"hello.*\"";
+        Map<String, Object> variableMap = new HashMap<>();
+        variableMap.put("name", "WANG");
+        variableMap.put("age", 25);
+        variableMap.put("interest", "basketball");
+        variableMap.put("desc", "hello wangz");
+        Matcher matcher = new Matcher(matchDsl, variableMap);
+        Assert.assertEquals(matcher.match(), true);
+    }
 
 //    @Test
 //    public void unescapeJavaTest() {

@@ -1,5 +1,7 @@
 package cn.wangz.matcher.relnode;
 
+import cn.wangz.matcher.function.FunctionFactory;
+
 import java.util.List;
 
 public class FuncRelExpr implements RelExpr {
@@ -14,7 +16,6 @@ public class FuncRelExpr implements RelExpr {
 
     @Override
     public Object eval() {
-        // TODO
-        return null;
+        return FunctionFactory.execute(funcName, params.stream().map(item -> item.eval()).toArray());
     }
 }
